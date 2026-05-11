@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balachandar | Cloud Security & AI/ML Security Engineer</title>
+  <meta name="description" content="Balachandar — CSE Engineer specializing in Cloud Security and AI/ML Security. AWS Certified. Building secure cloud architectures and defending AI systems.">
+  <meta property="og:title" content="Balachandar | Cloud Security & AI/ML Security">
+  <meta property="og:description" content="Securing the Cloud. Defending Intelligence.">
+  <meta property="og:url" content="https://balachandar.tech">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div id="cursorTrail"></div>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-name" id="preloaderName"></div>
+      <div class="preloader-scanline"></div>
+      <div class="preloader-bar"><div class="preloader-bar-fill" id="preloaderBar"></div></div>
+    </div>
+  </div>
+
+  <!-- STARFIELD + PARTICLES CANVAS -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">BALA<span>.</span></a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#expertise" class="nav-link">Expertise</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#expertise" class="mobile-link">Expertise</a>
+    <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#projects" class="mobile-link">Projects</a>
+    <a href="#certifications" class="mobile-link">Certifications</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge antigravity-float" style="--float-duration:4s;--float-height:12px;">
+          <span class="badge-dot"></span> OPEN TO INTERNSHIPS & OPPORTUNITIES
+        </div>
+        <h1 class="hero-name" id="heroName">BALACHANDAR</h1>
+        <p class="hero-subtitle">SECURING THE CLOUD. DEFENDING INTELLIGENCE.</p>
+        <div class="hero-typed">
+          <span class="typed-prefix">&gt; </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-outline">Explore My Work</a>
+          <a href="#contact" class="btn btn-filled">Download Resume</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-chip"><span class="stat-icon">☁️</span> AWS Certified</div>
+          <div class="stat-chip"><span class="stat-icon">📊</span> CGPA 7.45</div>
+          <div class="stat-chip"><span class="stat-icon">🛡️</span> Security+ In Progress</div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <canvas id="heroCanvas"></canvas>
+      </div>
+    </div>
+    <div class="hero-floating-objects" id="heroFloating"></div>
+    <div class="hero-grid-floor"></div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-avatar-col">
+          <div class="avatar-wrapper antigravity-float" style="--float-duration:5s;--float-height:18px;">
+            <div class="avatar-circle"><span>B</span></div>
+            <div class="avatar-ring avatar-ring-1"></div>
+            <div class="avatar-ring avatar-ring-2"></div>
+            <div class="avatar-glow"></div>
+            <div class="avatar-tags">
+              <span class="avatar-tag" style="--orbit-delay:0s;">AWS ☁️</span>
+              <span class="avatar-tag" style="--orbit-delay:1.5s;">Security 🔐</span>
+              <span class="avatar-tag" style="--orbit-delay:3s;">AI/ML 🤖</span>
+              <span class="avatar-tag" style="--orbit-delay:4.5s;">Linux 🐧</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text-col">
+          <span class="section-label">WHO I AM</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="about-bio">I'm Balachandar, a 3rd-year CSE student specializing in AI/ML, on a mission to become a Cloud Security and AI/ML Security Engineer. I believe the next generation of threats will target AI systems and cloud infrastructure — and I'm building the skills to defend both.</p>
+          <div class="about-stats">
+            <div class="about-stat-card glass-card antigravity-float" style="--float-duration:4s;--float-height:10px;">
+              <span class="stat-value">7.45</span><span class="stat-label">CGPA</span>
+            </div>
+            <div class="about-stat-card glass-card antigravity-float" style="--float-duration:4.5s;--float-height:14px;">
+              <span class="stat-value">1+</span><span class="stat-label">Certifications</span>
+            </div>
+            <div class="about-stat-card glass-card antigravity-float" style="--float-duration:5s;--float-height:12px;">
+              <span class="stat-value">Cloud</span><span class="stat-label">Security Focus</span>
+            </div>
+            <div class="about-stat-card glass-card antigravity-float" style="--float-duration:3.8s;--float-height:16px;">
+              <span class="stat-value">6th</span><span class="stat-label">Semester</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE SECTION -->
+  <section class="section expertise" id="expertise">
+    <div class="section-inner">
+      <span class="section-label center">WHERE I SPECIALIZE</span>
+      <h2 class="section-title center">Core Specializations</h2>
+      <p class="section-subtitle center">Two domains. One mission — Secure Everything.</p>
+      <div class="expertise-grid">
+        <div class="expertise-card glass-card cyan-accent antigravity-float" style="--float-duration:5.5s;--float-height:14px;">
+          <div class="expertise-icon cyan-glow">
+            <svg viewBox="0 0 80 80" width="80" height="80"><ellipse cx="40" cy="50" rx="30" ry="14" fill="none" stroke="#00f5ff" stroke-width="2"/><ellipse cx="40" cy="44" rx="30" ry="14" fill="none" stroke="#00f5ff" stroke-width="2"/><ellipse cx="40" cy="38" rx="30" ry="14" fill="none" stroke="#00f5ff" stroke-width="2"/><path d="M32 28 L40 18 L48 28" fill="none" stroke="#00f5ff" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="expertise-title">Cloud Security</h3>
+          <p class="expertise-sub">AWS · IAM · VPC · CloudTrail · Security Hub</p>
+          <p class="expertise-desc">Designing secure cloud architectures, implementing least-privilege IAM policies, monitoring threat patterns in AWS environments using CloudTrail and GuardDuty.</p>
+          <div class="expertise-tags">
+            <span>IAM</span><span>VPC Security</span><span>CloudTrail</span><span>GuardDuty</span><span>S3 Security</span><span>Encryption</span><span>Security Groups</span><span>AWS Config</span>
+          </div>
+        </div>
+        <div class="expertise-card glass-card purple-accent antigravity-float" style="--float-duration:6s;--float-height:16px;">
+          <div class="expertise-icon purple-glow">
+            <svg viewBox="0 0 80 80" width="80" height="80"><circle cx="40" cy="35" r="18" fill="none" stroke="#7b2fff" stroke-width="2"/><circle cx="32" cy="30" r="3" fill="#7b2fff" opacity="0.7"/><circle cx="48" cy="30" r="3" fill="#7b2fff" opacity="0.7"/><circle cx="40" cy="42" r="3" fill="#7b2fff" opacity="0.7"/><line x1="32" y1="30" x2="48" y2="30" stroke="#7b2fff" stroke-width="1" opacity="0.4"/><line x1="32" y1="30" x2="40" y2="42" stroke="#7b2fff" stroke-width="1" opacity="0.4"/><line x1="48" y1="30" x2="40" y2="42" stroke="#7b2fff" stroke-width="1" opacity="0.4"/><rect x="33" y="55" width="14" height="14" rx="3" fill="none" stroke="#7b2fff" stroke-width="2"/><line x1="40" y1="53" x2="40" y2="58" stroke="#7b2fff" stroke-width="2"/><circle cx="40" cy="63" r="2" fill="#7b2fff"/></svg>
+          </div>
+          <h3 class="expertise-title">AI/ML Security</h3>
+          <p class="expertise-sub">Adversarial ML · Model Security · Threat Detection</p>
+          <p class="expertise-desc">Studying adversarial attacks on machine learning models, building ML-powered intrusion detection systems, and exploring how AI systems can be secured against data poisoning and model theft.</p>
+          <div class="expertise-tags">
+            <span>Adversarial ML</span><span>IDS/IPS</span><span>Threat Detection</span><span>Model Security</span><span>Data Poisoning</span><span>SIEM</span><span>Log Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section class="section skills" id="skills">
+    <div class="section-inner">
+      <span class="section-label center">TECHNICAL ARSENAL</span>
+      <h2 class="section-title center">Skills Matrix</h2>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Cloud & Security -->
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:4s;--float-height:15px;--glow-color:#00f5ff;" data-percent="85">
+          <span class="skill-emoji">☁️</span><span class="skill-name">AWS Cloud</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:85%;--bar-color:#00f5ff;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:4.6s;--float-height:18px;--glow-color:#00f5ff;" data-percent="75">
+          <span class="skill-emoji">🔐</span><span class="skill-name">Cloud Security</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:75%;--bar-color:#00f5ff;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:5.2s;--float-height:12px;--glow-color:#ff2d78;" data-percent="65">
+          <span class="skill-emoji">🛡️</span><span class="skill-name">Security+</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:65%;--bar-color:#ff2d78;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:3.8s;--float-height:20px;--glow-color:#00f5ff;" data-percent="70">
+          <span class="skill-emoji">🔒</span><span class="skill-name">IAM & VPC</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:70%;--bar-color:#00f5ff;"></div></div>
+        </div>
+        <!-- AI/ML -->
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:5s;--float-height:14px;--glow-color:#7b2fff;" data-percent="65">
+          <span class="skill-emoji">🤖</span><span class="skill-name">Machine Learning</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:65%;--bar-color:#7b2fff;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:5.8s;--float-height:16px;--glow-color:#7b2fff;" data-percent="60">
+          <span class="skill-emoji">🧠</span><span class="skill-name">AI Security</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:60%;--bar-color:#7b2fff;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:4.4s;--float-height:13px;--glow-color:#7b2fff;" data-percent="60">
+          <span class="skill-emoji">📊</span><span class="skill-name">Threat Detection</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:60%;--bar-color:#7b2fff;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:6s;--float-height:17px;--glow-color:#7b2fff;" data-percent="50">
+          <span class="skill-emoji">🔍</span><span class="skill-name">SIEM & Logs</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:50%;--bar-color:#7b2fff;"></div></div>
+        </div>
+        <!-- Core -->
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:4.2s;--float-height:19px;--glow-color:#ffc800;" data-percent="75">
+          <span class="skill-emoji">🐍</span><span class="skill-name">Python</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:75%;--bar-color:#ffc800;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:5.5s;--float-height:11px;--glow-color:#22c55e;" data-percent="75">
+          <span class="skill-emoji">🐧</span><span class="skill-name">Linux/RHEL</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:75%;--bar-color:#22c55e;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:4.8s;--float-height:15px;--glow-color:#22c55e;" data-percent="70">
+          <span class="skill-emoji">⚙️</span><span class="skill-name">Bash/Shell</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:70%;--bar-color:#22c55e;"></div></div>
+        </div>
+        <div class="skill-orb antigravity-float glass-card" style="--float-duration:5.3s;--float-height:13px;--glow-color:#22c55e;" data-percent="72">
+          <span class="skill-emoji">🌿</span><span class="skill-name">Git</span>
+          <div class="skill-bar"><div class="skill-bar-fill" style="--bar-width:72%;--bar-color:#22c55e;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="section projects" id="projects">
+    <div class="section-inner">
+      <span class="section-label center">BUILT TO DEFEND</span>
+      <h2 class="section-title center">Projects That Defend</h2>
+      <div class="projects-grid">
+        <div class="project-card glass-card featured antigravity-float" style="--float-duration:6s;--float-height:10px;">
+          <span class="project-number">01</span>
+          <div class="project-icon">🔐</div>
+          <h3 class="project-title">AI-Powered Intrusion Detection System</h3>
+          <p class="project-desc">Built a machine learning model trained on NSL-KDD dataset to classify network intrusions (DoS, Probe, R2L, U2R). Achieved 94% accuracy using Random Forest + feature engineering.</p>
+          <div class="project-tags"><span>Python</span><span>Scikit-learn</span><span>ML</span><span>Security</span><span>NSL-KDD</span><span>Pandas</span></div>
+          <div class="project-links">
+            <a href="#" class="project-link">GitHub →</a>
+            <a href="#" class="project-link">View Report →</a>
+          </div>
+        </div>
+        <div class="project-card glass-card antigravity-float" style="--float-duration:5s;--float-height:14px;">
+          <span class="project-number">02</span>
+          <div class="project-icon">☁️</div>
+          <h3 class="project-title">AWS Security Audit Tool</h3>
+          <p class="project-desc">Automated Python script that scans AWS accounts for misconfigurations — open S3 buckets, over-permissive IAM roles, unencrypted storage, exposed security groups.</p>
+          <div class="project-tags"><span>Python</span><span>AWS</span><span>Boto3</span><span>IAM</span><span>S3</span><span>Security</span></div>
+          <div class="project-links"><a href="#" class="project-link">GitHub →</a></div>
+        </div>
+        <div class="project-card glass-card antigravity-float" style="--float-duration:5.5s;--float-height:12px;">
+          <span class="project-number">03</span>
+          <div class="project-icon">🐧</div>
+          <h3 class="project-title">Linux Hardening Script Suite</h3>
+          <p class="project-desc">Bash script collection for Ubuntu system hardening — disables unused services, configures UFW firewall rules, enforces SSH key-only auth, sets up fail2ban.</p>
+          <div class="project-tags"><span>Bash</span><span>Linux</span><span>UFW</span><span>SSH</span><span>Fail2ban</span><span>Hardening</span></div>
+          <div class="project-links"><a href="#" class="project-link">GitHub →</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section class="section certifications" id="certifications">
+    <div class="section-inner">
+      <span class="section-label center">CREDENTIALS & ROADMAP</span>
+      <h2 class="section-title center">Certifications</h2>
+      <p class="section-subtitle center">Building a verified security career, one cert at a time.</p>
+      <div class="cert-grid">
+        <div class="cert-card antigravity-float" style="--float-duration:5s;--float-height:12px;">
+          <div class="cert-front glass-card">
+            <div class="cert-icon">☁️</div>
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p>Amazon Web Services</p>
+            <span class="cert-badge completed">✓ COMPLETED</span>
+          </div>
+          <div class="cert-back glass-card">
+            <p>Validates foundational AWS cloud knowledge including core services, security model, pricing, and architecture.</p>
+          </div>
+        </div>
+        <div class="cert-card antigravity-float" style="--float-duration:5.5s;--float-height:14px;">
+          <div class="cert-front glass-card">
+            <div class="cert-icon">🛡️</div>
+            <h3>CompTIA Security+</h3>
+            <p>CompTIA</p>
+            <span class="cert-badge in-progress">⚡ IN PROGRESS</span>
+          </div>
+          <div class="cert-back glass-card">
+            <p>Industry-standard cybersecurity certification covering threats, cryptography, network security, and compliance.</p>
+          </div>
+        </div>
+        <div class="cert-card antigravity-float" style="--float-duration:6s;--float-height:10px;">
+          <div class="cert-front glass-card">
+            <div class="cert-icon">🐧</div>
+            <h3>Red Hat RHEL</h3>
+            <p>Red Hat Inc.</p>
+            <span class="cert-badge planned">○ PLANNED NEXT</span>
+          </div>
+          <div class="cert-back glass-card">
+            <p>Enterprise Linux system administration — reinforcing sysadmin foundations critical for security engineering.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cert-timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-node completed"><span>AWS CP ✓</span></div>
+        <div class="timeline-node in-progress"><span>Security+ ⚡</span></div>
+        <div class="timeline-node planned"><span>RHEL ○</span></div>
+        <div class="timeline-node planned"><span>AWS Security ○</span></div>
+        <p class="timeline-label">CERTIFICATION PATH</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY HIRE ME SECTION -->
+  <section class="section why-hire" id="whyhire">
+    <div class="section-inner">
+      <span class="section-label center">THE DIFFERENCE</span>
+      <h2 class="section-title center">Why Balachandar?</h2>
+      <p class="section-subtitle center">What makes me different from every other applicant.</p>
+      <div class="why-grid">
+        <div class="why-card glass-card antigravity-float" style="--float-duration:4.5s;--float-height:14px;">
+          <span class="why-icon">⚔️</span>
+          <h3>Dual Domain Focus</h3>
+          <p>I don't just know cloud. I don't just know AI/ML. I know how attackers exploit BOTH — and how to stop them.</p>
+        </div>
+        <div class="why-card glass-card antigravity-float" style="--float-duration:5s;--float-height:12px;">
+          <span class="why-icon">🐧</span>
+          <h3>Hands-on Linux</h3>
+          <p>I daily-drive Ubuntu, write Bash scripts, manage kernels, and troubleshoot at the OS level — not just theoretically.</p>
+        </div>
+        <div class="why-card glass-card antigravity-float" style="--float-duration:5.5s;--float-height:16px;">
+          <span class="why-icon">📜</span>
+          <h3>Certified + Learning</h3>
+          <p>AWS certified as a student. Security+ in progress. I invest in verified credentials, not just tutorials.</p>
+        </div>
+        <div class="why-card glass-card antigravity-float" style="--float-duration:4.8s;--float-height:10px;">
+          <span class="why-icon">🧠</span>
+          <h3>Security Mindset</h3>
+          <p>I think like an attacker to defend like an engineer. From IAM misconfigs to adversarial ML — I study the threats first.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section contact" id="contact">
+    <div class="section-inner">
+      <span class="section-label center">GET IN TOUCH</span>
+      <h2 class="section-title center">Let's Build Something Secure</h2>
+      <p class="section-subtitle center">Reach out for internships, collaborations, or just to connect.</p>
+      <form class="contact-form glass-card" id="contactForm" onsubmit="return false;">
+        <div class="form-group">
+          <input type="text" id="formName" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="formEmail" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="formMessage" placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline form-btn">SEND MESSAGE →</button>
+      </form>
+      <div class="social-links">
+        <a href="#" class="social-link antigravity-float" style="--float-duration:3.5s;--float-height:10px;" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-link antigravity-float" style="--float-duration:4s;--float-height:12px;" aria-label="GitHub">gh</a>
+        <a href="#" class="social-link antigravity-float" style="--float-duration:4.5s;--float-height:8px;" aria-label="Email">@</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Balachandar · Securing the Cloud · Defending Intelligence</p>
+    <p class="footer-domain">balachandar.tech</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
