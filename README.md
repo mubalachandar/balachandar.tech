@@ -1,6 +1,14 @@
 # BALACHANDAR M — Portfolio Website
 
-Static personal portfolio website ready for GitHub upload and domain deployment.
+Personal portfolio website built with HTML, CSS, and JavaScript.
+
+## Tech stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Three.js
+- GSAP
 
 ## Project structure
 
@@ -19,7 +27,9 @@ Static personal portfolio website ready for GitHub upload and domain deployment.
 ├── favicon.png
 ├── index.html
 ├── script.js
-└── style.css
+├── style.css
+├── .gitignore
+└── LICENSE
 ```
 
 ## Run locally
@@ -28,10 +38,14 @@ Static personal portfolio website ready for GitHub upload and domain deployment.
 python3 -m http.server 8000
 ```
 
-Open: `http://localhost:8000`
+Open in browser: `http://localhost:8000`
 
-## Deploy
+## Deployment (GitHub Pages)
 
-1. Push this folder to a GitHub repository.
-2. Enable GitHub Pages.
-3. Use `CNAME` for your custom domain.
+1. Push the project to GitHub.
+2. Enable **GitHub Pages** for the `main` branch.
+3. Keep the `CNAME` file for custom domain mapping.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file.
